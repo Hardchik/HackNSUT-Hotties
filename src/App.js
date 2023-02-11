@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import Bulb from './components/Bulb';
 
 function App() {
   return (
@@ -20,7 +21,7 @@ function App() {
     //   </header>
     // </div>
     <div>
-      
+      <Bulb />
     </div>
   );
 }
