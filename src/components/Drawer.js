@@ -23,6 +23,15 @@ import HealthAndSafetyIcon from '@mui/icons-material/HealthAndSafety';
 import { Link } from '@mui/material';
 import SecurityIcon from '@mui/icons-material/Security';
 
+import { BrowserRouter as Router,Routes, Route } from 'react-router-dom';
+// import Room1 from './Room1';
+// import Room2 from './Room2';
+// import Room3 from './Room3';
+// import Security from './Security';
+// import Energy from './Energy';
+import Bulb from './Bulb.jsx';
+
+
 const drawerWidth = 240;
 
 const openedMixin = (theme) => ({
@@ -299,12 +308,22 @@ export default function MiniDrawer() {
       </Drawer>
       <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
         <DrawerHeader />
-        <Typography paragraph>
-          Dashboard
-        </Typography>
-        <Typography paragraph>
-          Dashboard Name
-        </Typography>
+        
+        <Router>
+            <div className="App">
+            {/* <MiniDrawer /> */}
+            <Routes>
+                  {/* <Route exact path='/' element={< Home />}></Route>
+                  <Route exact path='/room1' element={< Room1 />}></Route>
+                  <Route exact path='/room2' element={< Room2 />}></Route>
+                  <Route exact path='/room3' element={< Room3 />}></Route>
+                  <Route exact path='/energy' element={< Energy />}></Route>
+                  <Route exact path='/security' element={< Security />}></Route> */}
+                  <Route exact path='/room1' element={< Bulb />}></Route>
+          </Routes>
+          </div>
+        </Router>
+
       </Box>
     </Box>
   );

@@ -3,12 +3,11 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import MiniDrawer from './components/Drawer';
+// import MiniDrawer from './components/Drawer';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <MiniDrawer />
     <App />
   </React.StrictMode>
 );
